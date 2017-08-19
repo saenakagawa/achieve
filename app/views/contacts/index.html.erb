@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+    <p><%= notice %></p>
+      <h1>お問い合わせ</h1>
+
+  <% @contacts.each do |contact| %>
+  <div class="row">
+    <h4><strong><%= blog.title %></strong></h4>
+    <p><%= blog.content %></p>
+    <p>名前:<%= contact.name %></p>
+    <p>メール:<%= contact.email %></p>
+    <p>本文:<%= contact.content%></p>
+  </div>
+  <% end %>
+
+<%= link_to "送信する", new_contact_path %>
+  </div>
+</div>
